@@ -32,7 +32,7 @@ if st.button("Consultar"):
         df_filtrado = consulta_excel(df_datos, empresa, empleado)
 
         if not df_filtrado.empty:
-            st.write(f"Resultados encontrados para: **{empleado}** en la empresa **{empresa}**")
+            st.write(f"Resultados encontrados para: **{empleado}** en Nombre **{empresa}**")
             st.dataframe(df_filtrado)
         else:
             st.write("No se encontraron resultados para los datos ingresados.")
