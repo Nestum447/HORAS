@@ -17,10 +17,10 @@ def consulta_excel(df, NOMBRE, EMPLEADO):
     return df[filtro]
 
 # Título de la aplicación
-st.title("Consulta de Datos de Personas")
+st.title("Consulta de Horas de Personas")
 
 # Crear cuadros de entrada para nombre de empresa y empleado
-empresa = st.text_input("Ingrese el nombre de la Empresa")
+empresa = st.text_input("Ingrese el nombre")
 empleado = st.text_input("Ingrese el Apellido y Nombre")
 
 # Cargar datos desde Excel
