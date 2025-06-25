@@ -21,7 +21,7 @@ st.title("Consulta de Horas de Personas")
 
 # Crear cuadros de entrada para nombre de empresa y empleado
 empresa = st.text_input("Ingrese el nombre")
-#empleado = st.text_input("Ingrese el Apellido y Nombre")
+empleado = st.text_input("Ingrese el Apellido y Nombre")
 
 # Cargar datos desde Excel
 df_datos = cargar_datos()
