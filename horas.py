@@ -32,7 +32,23 @@ if st.button("Consultar"):
         df_filtrado = consulta_excel(df_datos, empresa, empleado)
 
         if not df_filtrado.empty:
+           # st.write(f"Resultados encontrados para: **{empleado}** en Nombre **{empresa}**")
+           #st.dataframe(df_filtrado)
+
             st.write(f"Resultados encontrados para: **{empleado}** en Nombre **{empresa}**")
             st.dataframe(df_filtrado)
+
+            # Convertir a numérico por si hay errores o celdas vacías
+            df_filtrado['HORAS'] = pd.to_numeric(df_filtrado['HORAS'], errors='coerce')
+
+            # Sumar la columna HORAS
+            total_horas = df_filtrado['HORAS'].sum()
+
+            # Mostrar el total
+            st.write(f"**Total de HORAS:** {total_horas}")
+
+
+
+        
         else:
             st.write("No se encontraron resultados para los datos ingresados.")
